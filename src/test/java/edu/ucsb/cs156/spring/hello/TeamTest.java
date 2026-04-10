@@ -1,6 +1,8 @@
 package edu.ucsb.cs156.spring.hello;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -44,5 +46,20 @@ public class TeamTest {
         int result = t.hashCode();
         int expectedResult = 130294; 
         assertEquals(expectedResult, result);
+    }
+    @Test
+    public void equals_returns_true_for_same_object() {
+        assertTrue(team.equals(team));
+    }
+
+    @Test
+    public void equals_returns_false_for_same_name_but_different_members() {
+        Team other = new Team("test-team");
+        other.addMember("someone-else");
+        assertFalse(team.equals(other));
+    }
+    @Test
+    public void equals_returns_false_for_different_type() {
+        assertFalse(team.equals("not a team"));
     }
 }  

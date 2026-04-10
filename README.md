@@ -5,7 +5,7 @@
 
 Repo: https://github.com/ucsb-cs156-s26/jpa02-a-Fat-Cat
 
-Deployed at: https://jpa02-a-fat-cat.dokku-01.cs.ucsb.edu/
+Deployed at: adhttps://jpa02-a-fat-cat.dokku-01.cs.ucsb.edu/
 
 
 # About this repo
